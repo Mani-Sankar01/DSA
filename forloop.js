@@ -19,5 +19,16 @@ function findReverse(num) {
   }
   return newNum;
 }
-
-console.log(findReverse(123));
+function isPalendrome(num) {
+  let copyNum = num;
+  let revNum = 0;
+  while (num > 0) {
+    revNum = revNum * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  if (copyNum == revNum) {
+    return true;
+  } else {
+    return false;
+  }
+}
