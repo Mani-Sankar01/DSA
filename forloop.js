@@ -19,6 +19,9 @@ function findReverse(num) {
   }
   return newNum;
 }
+
+// Check the number is palendrome or not
+
 function isPalendrome(num) {
   let copyNum = num;
   let revNum = 0;
@@ -32,3 +35,17 @@ function isPalendrome(num) {
     return false;
   }
 }
+
+// Find the number of digits
+
+function numDigits(num) {
+  let abs = Math.abs(num);
+  let count = 0;
+  while (num > 0) {
+    count++;
+    num = Math.floor(num / 10);
+  }
+  return abs;
+}
+
+console.log(numDigits(15555));
